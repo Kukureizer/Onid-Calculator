@@ -12,11 +12,20 @@ body {
     border-radius: 20px;
 }
 
-#display {
+.display-wrapper {
+    display: flex;
+    flex-direction: column;
     border: 2px solid #000000;
     font-size: 30px;
     border-radius: 20px;
     margin-bottom: 5px;
+    text-align: end;
+    padding-right: 10px;
+
+}
+
+#display {
+    border-top: solid;
 }
 
 .buttons {
@@ -33,4 +42,6 @@ button{
     border-radius: 50%;
     font-size: 30px; 
 }
+
+
 
