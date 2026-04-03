@@ -1,47 +1,79 @@
 body {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1c1c1c;
+    font-family: Arial, sans-serif;
 }
 
 .wrapper {
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid #000000;
-    padding: 5px;
+    width: 280px;
+    background: #2a2a2a;
     border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .display-wrapper {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid #000000;
-    font-size: 30px;
-    border-radius: 20px;
-    margin-bottom: 5px;
-    text-align: end;
-    padding-right: 10px;
+    background: #111;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: right;
+    color: white;
+}
 
+#upper-display {
+    font-size: 18px;
+    color: #aaa;
 }
 
 #display {
-    border-top: solid;
+    font-size: 36px;
+    font-weight: bold;
 }
 
 .buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    border: 2px solid #000000;
-    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
 
-button{
-    width: 60px;
+button {
     height: 60px;
     border-radius: 50%;
-    font-size: 30px; 
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
+/* NUMBER */
+.number-btn {
+    background: #333;
+    color: white;
+}
 
+/* OPERATOR */
+.operator-btn {
+    background: #ff9500;
+    color: white;
+}
 
+/* MANAGE */
+.manage-btn {
+    background: #a5a5a5;
+    color: black;
+}
+
+/* HOVER */
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* ACTIVE */
+button:active {
+    transform: scale(0.95);
+}

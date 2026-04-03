@@ -1,6 +1,7 @@
 let firstNUmber;
 let currentNumber = "";
 let operator;
+let lastNumber;
 
 let display = document.getElementById("display");
 let upDisplay = document.getElementById("upper-display");
@@ -31,9 +32,8 @@ let calculate = function(){
         result = parseFloat(firstNUmber) * parseFloat(currentNumber);  
     }
     firstNUmber = result;
-    operator = null;
-    currentNumber = result;
-    display.textContent =result;
+    currentNumber = result
+    upDisplay.textContent = result;
 }
 
 buttons.addEventListener("click", function(event){
@@ -62,7 +62,7 @@ buttons.addEventListener("click", function(event){
         }
         else if(event.target.dataset.value === "equal")
         {
-            calculate();           
+            calculate();          
         }
     } else if (event.target.dataset.type === "manage"){
         if (event.target.dataset.value === "backspace") {
